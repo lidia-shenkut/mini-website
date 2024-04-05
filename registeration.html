@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration System</title>
+<link rel="stylesheet"href="rstyle.css">
+<head>
+    <body>
+        
+    <a id="first" href="home.html">home</a>
+        <a id="first" href="registeration.html">register here</a>
+        <a id="second"href="about .html">about us</a>
+        <a id ="third"href="contact.html">contact info</a>
+    </body>
+            
+        
+</head>
+
+<script>
+    function validateForm() {
+        var username = document.getElementById('username').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirmPassword').value;
+
+        // Simple validation
+        if (username === '' || email === '' || password === '' || confirmPassword === '') {
+            alert('All fields are required');
+            return false;
+        }
+
+        if (password !== confirmPassword) {
+            alert('Passwords do not match');
+            return false;
+        }
+
+        // Validation successful
+        alert('Registration successful!');
+        return true;
+    }
+    
+</script>
+</head>
+<body>
+<h2>Registration Form</h2>
+<form onsubmit="return validateForm()">
+
+    <label  for="username">Username:</label><br>
+    <input  type="text" id="username" name="username"><br><br>
+    
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email"><br><br>
+    
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+    
+    <label for="confirmPassword">Confirm Password:</label><br>
+    <input type="password" id="confirmPassword" name="confirmPassword"><br><br>
+    
+    <input type="submit" value="Register">
+
+   
+</form>
+</body>
+</html>
+ 
